@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <input id="inputUrl" type="url" oninput="main()"/>
+    <script>
+      async function main() {
+        const YOUTUBE_URL = inputUrl.value
+        const res = await fetch(`https://snapsave.app/youtube?url=${YOUTUBE_URL}`)
+        const data = await res.json()
+      }
+    </script>
+  </body>
+</html>
